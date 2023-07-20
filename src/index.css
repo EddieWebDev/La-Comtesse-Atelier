@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply sm:scroll-smooth;
+  }
+}
+
+@layer utilities {
+  .section-min-height {
+    min-height: calc(100vh - 250px);
+  }
+  .mobile-section-min-height {
+    min-height: calc(100vh - 110px);
+  }
+  .mobile-cart-height {
+    height: calc(100vh - 80px);
+  }
+  .toggle-btn {
+    @apply [&>div::after]:translate-y-0 [&>div::after]:-rotate-45 [&>div::before]:translate-y-0 [&>div::before]:rotate-45 [&>div]:rotate-[720deg] [&>div]:bg-transparent;
+  }
+}
